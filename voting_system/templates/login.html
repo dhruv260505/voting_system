@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Voting System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo">
+            <h1>Voting System</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('register_party') }}">Register Party</a></li>
+                <li><a href="{{ url_for('register_voter') }}">Register Voter</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form method="POST" action="{{ url_for('login') }}">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+            
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+            
+                <label for="role">Select Role:</label>
+                <select id="role" name="user_type" required>
+                    <option value="">-- Select Role --</option>
+                    <option value="voter">Voter</option>
+                    <option value="party">Party</option>
+                </select><br><br>
+            
+                <button type="submit">Login</button>
+            </form>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+            <a href="https://www.twitter.com" target="_blank">Twitter</a> |
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
+</body>
+<script>
+
+</script>
+</html>

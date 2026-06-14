@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Voter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register_voter.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="logo-title">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+            <h1>Voting System</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register_party') }}">Register Party</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="registration-form">
+            <h2>Register as a Voter</h2>
+            <form method="POST" action="/register_voter" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="mobile_number" placeholder="Mobile Number" required>
+                <input type="text" name="address" placeholder="Address" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="file" name="voter_image" required>  <!-- Fix name attribute here -->
+                <button type="submit">Register</button>
+            </form>
+            
+            
+            
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>

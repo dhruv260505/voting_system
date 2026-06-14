@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Home - Voting System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home_party.css') }}">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-title">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+            <h1>Voting System</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register_party') }}">Register Party</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            
+            <!-- Left Sidebar for Party Details -->
+            <aside class="sidebar">
+                <div class="profile-card">
+                    <img src="{{ party.logo }}" alt="Party Logo" class="party-logo">
+                    <h2>{{ party.name }}</h2>
+                    <p><strong>Leader:</strong> {{ party.leader_name }}</p>
+                    <p><strong>ID:</strong> {{ party.id }}</p>
+                    <p><strong>Mobile:</strong> {{ party.mobile }}</p>
+                    <p><strong>Address:</strong> {{ party.address }}</p>
+                    <div class="votes-earned">
+                        <strong>Total Votes:</strong> {{ party.total_votes }}
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Right Side for Results and Voter List -->
+            <section class="content">
+                
+                <!-- Results Section -->
+                <div class="results-section">
+                    <h2>Overall Election Results</h2>
+                    <div class="party-results">
+                        {% for p in parties %}
+                        <div class="party-card">
+                            <img src="{{ p.logo }}" alt="{{ p.name }}" class="party-logo-small">
+                            <h3>{{ p.name }}</h3>
+                            <p>Votes: {{ p.votes }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Voter List Section -->
+                <div class="voter-list">
+                    <h2>Voters Who Voted for You</h2>
+                    {% for voter in voters %}
+                    <div class="voter-card">
+                        <h3>{{ voter.name }}</h3>
+                        <p><strong>ID:</strong> {{ voter.id }}</p>
+                        <p><strong>Mobile:</strong> {{ voter.mobile }}</p>
+                        <p><strong>Address:</strong> {{ voter.address }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="social-links">
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>

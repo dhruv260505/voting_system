@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Voter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home_voter.css') }}">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-title">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo">
+            <h1>Voting System</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Login</a></li>
+                <li><a href="{{ url_for('register_voter') }}">Register Voter</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="content">
+            <!-- Left Side (Voter Details) -->
+            <section class="voter-details">
+                <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Voter Image">
+                <h2>John Doe</h2>
+                <p>ID: 123456</p>
+                <p>Mobile: +1-234-567-890</p>
+                <p>Address: 123 Voting Street, City</p>
+                <p class="voted-status not-voted">Not Voted</p>
+            </section>
+
+            <!-- Right Side (Voting and Results) -->
+            <section class="voting-results">
+                <!-- Results Section -->
+                <div class="results">
+                    <h2>Results</h2>
+                    <div class="party-results">
+                        <div class="party">
+                            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Party 1 Logo">
+                            <p>Party One</p>
+                            <p>Votes: 120</p>
+                        </div>
+                        <div class="party">
+                            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Party 2 Logo">
+                            <p>Party Two</p>
+                            <p>Votes: 95</p>
+                        </div>
+                    </div>
+                    <p>Total Votes: 215</p>
+                </div>
+
+                <!-- Voting Section -->
+                <div class="voting">
+                    <h2>Vote for Your Party</h2>
+                    <form method="POST" action="#">
+                        <div class="party-vote">
+                            <input type="radio" name="party_id" id="party_1">
+                            <label for="party_1">
+                                <img src="{{ url_for('static', filename='images/') }}" alt="Party One Logo">
+                                <p>Party One</p>
+                                <p>Leader: Alice Smith</p>
+                            </label>
+                        </div>
+                        <div class="party-vote">
+                            <input type="radio" name="party_id" id="party_2">
+                            <label for="party_2">
+                                <img src="{{ url_for('static', filename='images/') }}" alt="Party Two Logo">
+                                <p>Party Two</p>
+                                <p>Leader: Bob Johnson</p>
+                            </label>
+                        </div>
+                        <button type="submit" class="vote-button">Vote</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="social-links">
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>

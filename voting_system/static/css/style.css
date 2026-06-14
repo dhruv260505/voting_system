@@ -1,0 +1,95 @@
+/* style.css */
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    margin: 40px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #222;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Navbar */
+nav {
+    background-color: #004aad;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #d1e0ff;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Button (Common) */
+button, .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #004aad;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #d1e0ff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

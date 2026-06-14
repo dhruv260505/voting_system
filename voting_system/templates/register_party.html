@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Party</title>
+    <link rel="stylesheet" href="static/css/register_party.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-title">
+            <img src="static/images/logo.jpg" alt="Logo">
+            <h1>Voting System</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register_voter.html">Register Voter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Registration Form Section -->
+    <main>
+        <section class="registration-form">
+            <h2>Register Your Party</h2>
+            <form method="POST" action="#">
+                <!-- Party Registration Form Fields -->
+                <label for="id_number">ID Number:</label>
+                <input type="text" name="id_number" placeholder="Enter Party ID Number" required>
+            
+                <label for="party_name">Party Name:</label>
+                <input type="text" name="party_name" placeholder="Full Party Name" required>
+            
+                <label for="leader_name">Leader Name:</label>
+                <input type="text" name="leader_name" placeholder="Party Leader's Name" required>
+            
+                <label for="email">Party Email:</label>
+                <input type="email" name="email" placeholder="Party Mail ID" required>
+            
+                <label for="mobile_number">Party Mobile Number:</label>
+                <input type="tel" name="mobile_number" placeholder="Party Mobile Number" required>
+            
+                <label for="address">Party Address:</label>
+                <textarea name="address" placeholder="Party Address" required></textarea>
+            
+                <label for="symbol">Party Logo:</label>
+                <input type="file" name="symbol" accept="image/*" required>
+            
+                <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="Enter Password" required>
+            
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="social-links">
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>

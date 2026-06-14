@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+header .logo-title {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-title img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Content Section */
+main {
+    display: flex;
+    padding: 30px;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+}
+
+/* Left Side (Voter Details) */
+.voter-details {
+    width: 25%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.voter-details img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.voter-details p {
+    font-size: 14px;
+}
+
+.voted-status {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.voted {
+    background-color: green;
+    color: white;
+}
+
+.not-voted {
+    background-color: red;
+    color: white;
+}
+
+/* Right Side (Voting Results & Vote Section) */
+.voting-results {
+    width: 75%;
+    padding-left: 30px;
+}
+
+.results h2, .voting h2 {
+    margin-bottom: 20px;
+}
+
+.party-results {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.party {
+    width: 30%;
+    text-align: center;
+}
+
+.party img {
+    width: 60px;
+    height: 60px;
+}
+
+.party-vote {
+    margin-bottom: 20px;
+}
+
+.vote-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.vote-button:hover {
+    background-color: #45a049;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .contact-info {
+    margin-bottom: 20px;
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-links a:hover {
+    text-decoration: underline;
+}
